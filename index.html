@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Golden Table | Fine Dining</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.svg">
+
+    <meta name="description" content="An elegant restaurant website featuring table reservations, opening hours and responsive navigation.">
+
+    <meta name="author" content="MetaSkillGroup">
+
+    <meta property="og:title" content="Golden Table | Fine Dining">
+
+    <meta property="og:description" content="Experience delicious vegetarian food and elegant fine dining at Golden Table.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" content="images/restaurant.jpg">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+<div id="scroll-progress"></div>
+
+<div id="preloader">
+    <div class="loader-content">
+        <h2>Golden Table</h2>
+        <p>FINE DINING</p>
+        <div class="loader-circle"></div>
+        <span>Preparing Your Experience...</span>
+    </div>
+</div>
+
+
+    <header>        
+        <div class="logo">
+            <h1>Golden Table</h1>
+            <p>FINE DINING</p>
+        </div>
+
+        
+        <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+            
+        </button>
+                                       
+        <div class="mobile-menu" id="mobile-menu">
+
+            <nav class="left-nav">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#menu">Menu</a>
+                </li>
+                
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="right-nav">
+            <a href="#gallery"> Gallery</a>
+            <a href="#contact">Contact</a>
+            <a href="#reservation-history">Reservations</a>
+            <button type="button" id="book-btn"> Book a Table</button>
+        </nav>
+
+        </div>  
+                
+    </header>
+
+    <div class="status-bar">
+
+        <div class="status-container">
+
+            <span id="status-dot"></span>
+
+            <span id="status-text">Open/Closed</span>
+
+            <details>
+                <summary>Opening Hours</summary>
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Opening Hours</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>11 AM - 10 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>11 AM - 10 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>11 AM - 10 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>11 AM - 10 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>11 AM - 10 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>11 AM - 10 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>11 AM - 10 PM</td>
+                        </tr>
+                        </tbody>
+                    </table>
+            </details>
+
+        </div>
+
+        </div>
+
+    <section class="hero-section" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-subtitle">WELCOME TO GOLDEN TABLE</p>
+
+            <h2>Experience the Art of Fine Dining</h2>
+
+            <p class="hero-description">
+                Discover exceptional flavours, elegant ambience
+                and unforgettable moments.
+            </p>
+
+            <!--<button type="button" class="hero-book-btn" id="hero-book-btn">
+                Book a Table
+            </button>-->
+
+        </div>
+
+        <div class="hero-scroll">
+            <a href="#menu">
+                Explore Our Menu
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+
+    </section>
+
+
+    <section class="menu-section reveal" id="menu">
+
+        <div class="menu-heading">
+            <p class="section-subtitle">OUR MENU</p>
+            <h2>Discover Our Signature Dishes</h2>
+            <p>Carefully crafted dishes made with fresh ingredients and passion.</p>
+        </div>
+
+
+    <div class="menu-filters">
+
+        <button type="button" class="filter-btn active" data-filter="all">
+            All
+        </button>
+
+        <button type="button" class="filter-btn" data-filter="starter">
+            Starters
+        </button>
+
+        <button type="button" class="filter-btn" data-filter="main-course">
+            Main Course
+        </button>
+
+        <button type="button" class="filter-btn" data-filter="dessert">
+            Desserts
+        </button>
+
+    </div>
+
+
+        <div class="menu-grid">
+
+            <article class="menu-card" data-category="starter">
+                <img src="images/bruschetta.jpg" alt="Fresh tomato bruschetta">
+                <div class="menu-card-content">
+                    <span class="menu-category">STARTER</span>
+                    <h3>Tomato Bruschetta</h3>
+                    <p>Toasted bread topped with fresh tomatoes, basil and olive oil.</p>
+                    <span class="menu-price">₹249</span>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="starter">
+                <img src="images/cream-soup.jpg" alt="Creamy mushroom soup">
+                <div class="menu-card-content">
+                    <span class="menu-category">STARTER</span>
+                    <h3>Creamy Mushroom Soup</h3>
+                    <p>A rich and smooth mushroom soup prepared with fresh herbs.</p>
+                    <span class="menu-price">₹199</span>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="main-course">
+                <img src="images/paneer-tikka.jpg" alt="Paneer tikka">
+                <div class="menu-card-content">
+                    <span class="menu-category">MAIN COURSE</span>
+                    <h3>Paneer Tikka</h3>
+                    <p>Marinated paneer grilled with aromatic spices and herbs.</p>
+                    <span class="menu-price">₹349</span>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="main-course">
+                <img src="images/vegetable-pasta.jpg" alt="Creamy vegetable pasta">
+                <div class="menu-card-content">
+                    <span class="menu-category">MAIN COURSE</span>
+                    <h3>Italian Vegetable Pasta</h3>
+                    <p>Delicious pasta tossed in a creamy sauce with fresh vegetables.</p>
+                    <span class="menu-price">₹399</span>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="dessert">
+                <img src="images/chocolate-cake.jpg" alt="Chocolate cake">
+                <div class="menu-card-content">
+                    <span class="menu-category">DESSERT</span>
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Warm chocolate cake with a rich and gooey chocolate centre.</p>
+                    <span class="menu-price">₹249</span>
+                </div>
+            </article>
+
+            <article class="menu-card" data-category="dessert">
+                <img src="images/cheesecake.jpg" alt="Classic cheesecake">
+                <div class="menu-card-content">
+                    <span class="menu-category">DESSERT</span>
+                    <h3>Classic Cheesecake</h3>
+                    <p>Soft and creamy cheesecake with a buttery biscuit base.</p>
+                    <span class="menu-price">₹279</span>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="about-section reveal" id="about">
+
+        <div class="about-image">
+            <img src="images/restaurant-interior.jpg"
+                alt="Elegant Golden Table restaurant interior">
+        </div>
+
+        <div class="about-content">
+
+            <p class="about-subtitle">OUR STORY</p>
+
+            <h2>Where Every Meal Becomes a Memory</h2>
+
+            <p>
+                Welcome to Golden Table, where exceptional food meets
+                warm hospitality. We believe that dining is more than
+                just a meal — it is an experience worth remembering.
+            </p>
+
+            <p>
+                Our chefs carefully prepare every dish using fresh
+                ingredients, authentic flavours and a passion for
+                creating memorable moments.
+            </p>
+
+            <div class="about-highlights">
+
+                <div>
+                    <h3>Fresh</h3>
+                    <p>Quality Ingredients</p>
+                </div>
+
+                <div>
+                    <h3>Elegant</h3>
+                    <p>Fine Dining Experience</p>
+                </div>
+
+                <div>
+                    <h3>Warm</h3>
+                    <p>Friendly Hospitality</p>
+                </div>
+
+            </div>
+
+            <button type="button" class="about-book-btn"
+                    onclick="document.getElementById('book-btn').click()">
+                Book Your Table
+            </button>
+
+        </div>
+
+    </section>
+
+    <section class="gallery-section reveal" id="gallery">
+
+    <div class="gallery-heading">
+        <p class="gallery-subtitle">OUR GALLERY</p>
+        <h2>A Glimpse of Golden Table</h2>
+        <p>Explore our food, ambience and memorable dining experiences.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="images/gallery-interior.png"
+                 alt="Golden Table restaurant interior">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery-food.png"
+                 alt="Beautifully presented restaurant dish">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery-dining.jpg"
+                 alt="Elegant restaurant dining setup">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery-dessert.jpg"
+                 alt="Delicious chocolate dessert">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery-chef.jpg"
+                 alt="Chef preparing a fine dining dish">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/gallery-table.jpg"
+                 alt="Luxury restaurant table arrangement">
+        </div>
+
+    </div>
+
+    </section>
+
+    <section class="contact-section reveal" id="contact">
+
+        <div class="contact-heading">
+            <p class="contact-subtitle">GET IN TOUCH</p>
+            <h2>We'd Love to Hear From You</h2>
+            <p>Visit us or get in touch to plan your next dining experience.</p>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Our Location</h3>
+                <p>@address</p>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Phone Number</h3>
+                <p>+91 XXXXX XXXXX</p>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email Address</h3>
+                <p>info@goldentable.com</p>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Opening Hours</h3>
+                <p>Monday – Sunday</p>
+                <p>11:00 AM – 10:00 PM</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="reservation-history reveal" id="reservation-history">
+
+        <h2>Reservation History</h2>
+
+        <p>Manage your table reservations.</p>
+
+        <div class="reservation-table-container">
+
+            <table id="reservation-table">
+
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Customer Name</th>
+                        <th>Phone Number</th>
+                        <th>Guests</th>
+                        <th>Reservation Date</th>
+                        <th>Reservation Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="reservation-list">
+                  
+                </tbody>
+
+            </table>
+
+            <p id="no-bookings">
+                No reservations found.
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer class="footer-section">
+
+        <div class="footer-container">
+
+        
+            <div class="footer-about">
+                <h2>Golden Table</h2>
+                <p class="footer-tagline">FINE DINING</p>
+
+                <p>
+                    Experience exceptional food, elegant ambience
+                    and warm hospitality at Golden Table.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="#reservation-history">Reservations</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    @address
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 XXXXX XXXXX
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@goldentable.com
+                </p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                ✨ © 2026 Golden Table | Where Every Meal Becomes a Memory 🍽️
+            </p>
+        </div>
+
+    </footer>
+
+    <div class="reservation-modal" id="reservation-modal">
+
+    <div class="modal-content">
+
+        <button  type="button" class="close" id="close-btn" aria-label="Close reservation form">
+            <i class="fa-solid fa-xmark"></i>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+        </button>
+
+        <h2>Reserve Your Table</h2>
+
+        <form id="reservation-form" novalidate>
+            <label for="name">First Name</label> 
+            <input type="text" id="name" name="name" placeholder="Enter Your First Name" required>
+            <p id="name-error" class="field-error"></p>
+
+            <label for="Lname">Last Name</label> 
+            <input type="text" id="Lname" name="Lname" placeholder="Enter Your Last Name" required>
+            <p id="Lname-error" class="field-error"></p>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            <p id="phone-error" class="field-error" role="alert"></p>
+            
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="" disabled selected>Please select</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+                <option value="9">9 Guests</option>
+                <option value="10">10 Guests</option>
+            </select>
+            <p id="guests-error" class="field-error"></p>
+
+            <label for="booking-date">Reservation Date</label>
+            <input type="date" id="booking-date" name="booking-date" required>
+            <p id="date-error" class="field-error"></p>
+
+            <label for="booking-time">Reservation Time</label>
+            <input type="time" id="booking-time" name="booking-time" required>
+            <p id="time-error" class="field-error"></p>
+            
+            <button type="submit" id="submit-booking">Confirm Reservation</button>
+        </form>
+
+    </div>
+
+    </div>
+
+    <div class="confirmation-modal" id="confirmation-modal">
+
+    <div class="confirmation-content">
+
+        <button type="button" id="close-confirmation"
+                aria-label="Close confirmation">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="confirmation-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Reservation Confirmed!</h2>
+
+        <p>Thank you for choosing Golden Table.</p>
+
+        <div class="confirmation-details">
+
+            <p>Name: <span id="confirmation-name"></span></p>
+
+            <p>Phone: <span id="confirmation-phone"></span></p>
+
+            <p>Guests: <span id="confirmation-guests"></span></p>
+
+            <p>Date: <span id="confirmation-date"></span></p>
+
+            <p>Time: <span id="confirmation-time"></span></p>
+
+        </div>
+
+        <button type="button" id="done-confirmation">
+            Done
+        </button>
+
+    </div>
+
+    </div>
+    <script src="script.js">
+    </script>
+
+
+
+    <a href="#" class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+
+</body>
+</html>
