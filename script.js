@@ -549,7 +549,7 @@ window.addEventListener("load", function () {
 });*/
 
 
-const preloaderStartTime = Date.now();
+/*const preloaderStartTime = Date.now();
 
 window.addEventListener("load", function () {
     const preloader = document.getElementById("preloader");
@@ -567,7 +567,7 @@ window.addEventListener("load", function () {
 
     }, remainingTime);
 });
-
+*/
 
 const revealElements = document.querySelectorAll(".reveal");
 
